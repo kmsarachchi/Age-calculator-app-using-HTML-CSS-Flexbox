@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Figtree:wght@600;800&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700;800&family=Manrope:wght@800&family=Poppins:ital,wght@0,700;1,400;1,800&family=Roboto:wght@400;700&family=Work+Sans:wght@400;600;700&display=swap");
+
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--Off-white);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--White);
+  width: 832px;
+  border-radius: 1.5rem 1.5rem 12rem 1.5rem;
+  padding: 3rem;
+}
+
+.input-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.input-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.input-column label {
+  color: var(--Smokey-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+}
+.input-column input {
+  border: 1px solid var(--Light-grey);
+  cursor: pointer;
+  max-width: 10rem;
+  font-size: 32px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.input-column input:hover {
+  border: 1px solid var(--Purple);
+}
+.input-column small {
+  color: var(--Light-red);
+  font-weight: 400i;
+  font-style: italic;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.bar {
+  height: 1px;
+  width: 100%;
+  background-color: var(--Light-grey);
+}
+.divider button {
+  background-color: var(--Purple);
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.divider button:hover {
+  background-color: var(--Off-black);
+}
+
+.output-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 7rem;
+}
+
+.output-container h1 {
+  color: var(--Off-black);
+  font-style: italic;
+  font-size: 6rem;
+}
+.output-container span {
+  color: var(--Purple);
+}
+/*-------------------------------------------------------------------*/
+@media (max-width: 860px) {
+  body {
+    /* width: 100%; */
+  }
+  .container {
+    min-width: 600px;
+    width: 100%;
+    padding: 2rem;
+  }
+  .input-container {
+    gap: 1.5rem;
+  }
+  .divider {
+    flex-direction: column;
+    padding: 80px 0 20px 0;
+  }
+
+  .divider button {
+    margin-top: -45px;
+  }
+}
